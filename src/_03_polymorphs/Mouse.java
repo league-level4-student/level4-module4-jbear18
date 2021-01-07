@@ -13,8 +13,8 @@ public class Mouse extends Polymorph {
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
-g.setColor(Color.YELLOW);
-g.fillRect(getX(), getY(), getWidth(), getHeight());
+		g.setColor(Color.YELLOW);
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 }
