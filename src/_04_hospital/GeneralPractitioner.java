@@ -2,9 +2,12 @@ package _04_hospital;
 
 public class GeneralPractitioner extends Doctor{
 
-	public Object makesHouseCalls() {
+public boolean makesHouseCalls() {
 
-		return null;
+		return true;
 	}
+public boolean performsSurgery() {
+	return false;
+}
 
 }

@@ -1,8 +1,10 @@
 package _04_hospital;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Doctor {
+	ArrayList<Patient> patients = new ArrayList<Patient>();
 
 	public boolean performsSurgery() {
 
@@ -14,19 +16,24 @@ public class Doctor {
 		return false;
 	}
 
-	public void assignPatient(Patient patient) throws DoctorException{
-	
-		
+	public void assignPatient(Patient patient) throws DoctorException {
+		if (patients.size() == 3) {
+			throw new DoctorException();
+		} else {
+			patients.add(patient);
+		}
+
 	}
 
-	public List<Doctor> getPatients() {
+	public ArrayList<Patient> getPatients() {
 
-		return null;
+		return patients;
 	}
 
 	public void doMedicine() {
-
-		
+for (int i = 0; i < patients.size(); i++) {
+	patients.get(i).checkPulse();
+}
 	}
 
 }
